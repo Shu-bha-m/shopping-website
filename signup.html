@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <style>
+        body{
+
+            font-family: 'Times New Roman', Times, serif;
+            padding: 10px;
+            color: black;
+            margin-left: 300px;
+            background-image: url(/images/login/bg-01.jpg);
+
+        }
+        form{
+            margin-left: 50px;
+            border-radius: 10px;
+            border: 3px solid rebeccapurple;
+            padding: 15px;
+            width: 500px;
+            background-color: white;
+        }
+        .container{
+            margin-left: 130px;
+        }
+        input[type=text],input[type=date],input[type=tel],input[type=email], input[type=password]
+        ,input[type=number]{
+             width: 60%;
+             padding: 14px 20px;
+             margin: 8px 0;
+             display: inline-block;
+             border: 2px solid rgb(41, 32, 32);
+             box-sizing: border-box;
+        }
+        /* signup button */
+        .button {
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+            padding: 10px 50px;
+            background: linear-gradient(to left, #fc6767,
+                    #ec008c);
+            color: #fff;
+            font: inherit;
+            border: 2px solid #fff;
+            outline: none;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+        .form__switch {
+            display: block;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #a1a1a1;
+        }
+        .form__switch:hover{
+            text-decoration: underline;
+        }
+
+.form__switch a {
+    text-decoration: none;
+    color: #fc6767;
+}
+    </style>
+
+</head>
+<body>
+    <form action="login.html">
+        <h1 style="text-align: center;">Sign Up</h1>
+    <div class="container">
+        <label for="fullname">Name</label><br>
+        <input type="text" placeholder="Name" name="fullname" required><br>
+        <label for="dob">Date-of-birth</label><br>
+        <input type="date" placeholder="select date"><br>
+        <label for="mobile no">Contact details</label><br>
+        <input type="tel" maxlength="10" placeholder="Mobile no" required><br>
+        <label for="otp">otp</label><br>
+        <input type="number" name="otp" maxlength="4" placeholder="enter otp"><br>
+        <label for="email">Email id</label><br>
+        <input type="email" name="email" placeholder="Email "><br>
+        <label for="gender">Gender</label><br>
+        <input type="radio" name="gender">male
+        <input type="radio" name="gender">female
+        <input type="radio" name="gender">other <br>
+        <label for="address">Address</label><br>
+        <input type="text" placeholder="Address"><br>
+        <label for="password">Password</label><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <label for="conform password">conform password</label><br>
+        <input type="password" name="conform Password" required placeholder="Confirm Password"><br>
+    </div>
+    <!-- <div class="submitcontainer"> -->
+        <button type="submit" class="button">submit</button>
+        <span class="form__switch">
+            Already have an account? <a href="/login.html">Login</a>
+        </span>
+    <!-- </div> -->
+</form>
+</body>
+</html>

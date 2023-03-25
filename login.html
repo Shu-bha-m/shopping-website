@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>login</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-image: url(/images/login/bg-01.jpg);
+        }
+        /* login title */
+        .lg{
+            text-align: center;
+            color: black;
+        }
+        form{
+            margin: auto;
+            margin-top: 100px;
+            width: 30%;
+            height: 600px;
+            border: 3px solid #252222;
+            background-color: white;
+            border-radius: 15px;
+        }
+        input[type=text],input[type=password]{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            /* margin-left: 30px; */
+            display: inline-block;
+            border: none;
+            background: transparent;
+            border-bottom: 1px solid #252222;
+            box-sizing: border-box;
+        }
+        .login{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 70%;
+            padding: 10px 50px;
+            background: linear-gradient(to left, #fc6767,
+                    #ec008c);
+            color: #fff;
+            font: inherit;
+            border: 2px solid #fff;
+            outline: none;
+            cursor: pointer;
+            border-radius: 3rem;
+        }
+        .rem{
+        margin-top: -30px;
+        background-color: aquamarine;
+
+            
+        }
+         .container{
+            padding: 20px;
+        } 
+        .cancelcontainer{
+            background-color: rgb(163, 169, 173);
+            height: 30px;
+        }
+        .cancel{
+            background-color: rgb(245, 111, 111);
+            margin-left: 18px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+        .cancel:hover{
+            transform: scale(1.2);
+        }
+        .forget{
+            margin-top: 5px;
+            float: right;
+            color: blue;
+            cursor: pointer;
+        }
+        .forget:hover{
+            text-decoration: underline;
+        }
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+            margin-left: 120px;
+            width: 30px;
+            height: 30px;
+            padding-top: 15px;
+            padding-left: 15px;
+            border-radius: 50%;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+            margin-left: 5px;
+            width: 30px;
+            height: 30px;
+            padding-top: 15px;
+            padding-left: 15px;
+            border-radius: 50%;
+        }
+
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+            margin-left: 5px;
+            width: 30px;
+            height: 30px;
+            padding-top: 15px;
+            padding-left: 15px;
+            border-radius: 50%;
+        }
+       
+    </style>
+</head>
+<body>
+    
+    <form action="home.html" target="_self">
+        <div class="lg"><h1>Login</h1></div>
+        <div class="container">
+            <label for="username">Username</label><br>
+            <input type="text" placeholder="Type your username" name="username" required class="inputtext"><br>
+            <label for="password">Password</label><br> 
+            <input type="password" placeholder="Type your password" name="password" required class="inputtext"><br>
+            <div class="forget">
+                <a href="#"> forget password</a>
+            </div>
+            <button type="submit" class="login">login</button><br>
+            <input type="checkbox">Remember me
+       </div>
+        <div style="margin-left: 50%; ">Or</div>
+        <div class="symbol" style="margin-top: 30px; ">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+        </div>
+        <div style="margin-left: 30px; margin-top: 10px;">
+            <h4 style="margin-left: 100px;">Don't have account?</h4>
+            <a href="/signup.html" style="margin-left: 135px; margin-top: -30px;"> signup</a>
+        </div>
+    </form>   
+</body>
+</html>

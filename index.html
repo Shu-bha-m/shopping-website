@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+        /* navgation bar */
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .navbar{
+            overflow: hidden; 
+            background-color: #333;
+             /* position: fixed;  */
+             width: 100%;
+            
+        }
+        .navbar a{
+            /* float:right; */
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            
+        }
+        .dropdown{
+            float: right;
+            overflow: hidden;
+             margin-right: 20px; 
+            right: 0;
+        }
+        
+        .dropdown .dropbuton{
+            cursor:pointer;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            /* margin: 0px; */
+            margin-right: 20px;
+        }
+        .navbar a:hover, .dropdown:hover .dropbuton:hover{
+            background-color: red;
+        }
+        .dropdown-content{
+            display: none;
+            position:absolute;
+            background-color: #f9f9f9;
+            min-width: 16px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a{
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover{
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+
+        /* different category images */
+        .row{           
+            padding: 20px;
+            /* margin-top: 50px; */
+        }
+        .column{
+            margin-left: 35px;
+            float: left;
+            padding: 2px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .column:hover{
+            transform: scale(1.2);
+            text-decoration: underline;
+            
+        }
+        h1{
+            margin-top: 50px;
+        }
+        .column a{
+            color: black;
+            text-decoration: none;
+        }
+
+        /* for contact popup */
+        .overlay{
+            position: fixed;
+            top: 0; 
+            bottom: 0;
+            left: 0;
+            right: 0; 
+            background: rgba(0, 0, 0, 0.6);
+            visibility: hidden;
+            opacity: 0;
+        }
+        .overlay:target{
+            visibility: visible;
+            opacity: 1;
+        }
+        .popup{
+            position: relative;
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 15px;
+            width: 40%;
+        }
+        .popup .close{
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+        }
+            .fa-facebook {
+            background: #3B5998;
+            color: rgb(210, 48, 48);
+        }
+        .fa-twitter {
+             background: #55ACEE;
+            color: white;
+        }
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+        .dis_img:hover{
+            transform: scale(1.2);
+        }
+        .offer_img{
+            padding: 50px;
+            margin-left: auto;
+        }
+    </style>
+</head>
+    <body>
+        <!-- navigation bar -->
+        <div class="navbar">
+            <a href="home.html" target="_self">home</a>
+            <a href="login.html" target="_top" >login</a>
+            <a href="signup.html" target="_self">signup</a>
+            <a href="#bottom">About us</a>
+            <a class="button" href="#onclick">contact us</a>
+                <div id="onclick" class="overlay">
+                    <div class="popup">
+                        <h2><span> &#128241; &nbsp;</span>- &nbsp;8600566261</h2>
+                        <h2><i class="material-icons" style="color: red;">&#xe158; &nbsp;</i>- &nbsp; Dreamkart@gmail.com</h2>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                        </div>
+                    </div>
+                </div>
+            <div class="dropdown">
+                <button class="dropbuton">&#9776  <!-- symbol for 3 line*/ --> 
+                    <i class="fa fa-caret-down"></i>
+                </button> 
+                <div class="dropdown-content">
+                    <a href="payment.html" target="_blank">payment</a>
+                    <a href="address.html" target="_blank">address</a>
+                    <a href="#">Orders</a>
+                </div>
+            </div>
+            <input type="search"  placeholder="search products,brands" style="padding: 3px; margin-top: 11px; margin-left: 200px;
+            width: 350px; border-radius: 25px; height: 30px; display: inline-block;" >
+        </div><br><br>
+
+        <!-- todays special offer discount images -->
+       <div class="img"> 
+            <img src="/image1.jpg" style="width: 100%; margin-top: 30px;">
+       </div>      
+       <div class="dis_img">
+            <img src="/images/offer/image4.jpg" style="width: 70%; height: 150px; display:block ; margin-left: auto; margin-right: auto; margin-top: 20px; border-radius: 20px; border: 4px solid gray; ">
+       </div>
+       <div class="offer_img">
+        <img src="/images/offer/image2.jpg" style="height: 200px; width: 350px;margin-left: 15px;">
+        <img src="/images/offer/image5.jpg" style="height: 200px; width: 350px; margin-left: 30px; ">
+        <img src="/images/offer/image6.jpg" style="height: 200px; width: 350px; margin-left: 30px;">
+       </div>
+      <!-- different category images -->
+       
+      <h1 style="background-color: #d47979; color: chocolate; text-align: center;">Collection</h1>
+        <div class="row">
+            <div class="column">
+                <a href="/subfolder/formal.html" target="_self"><img src="/images/images2.jpg" style="padding: 18px; border-radius: 50%; height: 150px; width: 150px;">
+                <h4>formal Shirt</h4></a>
+            </div>
+            <div class="column">
+                <a href="/subfolder/formal.html" target="_self"><img src="/images/images3.jpg"  style="padding: 18px; border-radius: 50%; height: 150px; width: 150px;" >
+                <h4>Trousers</h4></a>
+            </div>
+            <div class="column">
+                <a href="/subfolder/kurtaset.html" target="_self"><img src="/images/images4.jpg" style="padding: 18px; border-radius: 50%; height: 150px;width:  150px;">
+                 <h4>Kurta set</h4></a>
+            </div>
+            <div class="column">
+                <img src="/images/images5.jpg" style="padding: 18px; border-radius: 50%; height: 150px; width: 150px; ">
+                <h4>Top</h4>
+            </div>
+            <div class="column">
+                <a href="/subfolder/shirt.html"><img src="/images/image6.jpg" style="padding: 18px; border-radius: 50%; height: 150px;width:  150px;">
+                <h4>Shirt</h4></a>
+            </div> 
+        </div>
+        <div class="row">
+            <div class="column">
+                <a href="/subfolder/t-shirt.html" target="_self"><img src="/images/images7.jpg" style="padding: 18px; border-radius: 50%; height: 150px; width: 150px;">
+                <h4>t Shirt</h4></a>
+            </div>
+            <div class="column">
+                <img src="/images/images8.jpg"  style="padding: 18px; border-radius: 50%; height: 150px; width: 150px;" >
+                <h4>Saree</h4>
+            </div>
+            <div class="column">
+                <img src="/images/images12.jpg" style="padding: 18px;  border-radius: 50%; height: 150px;width:  150px;">
+                 <h4>Sweatshirt</h4>
+            </div>
+            <div class="column">
+                <img src="/images/images14.jpg" style="padding: 18px; border-radius: 50%; height: 150px; width: 150px; ">  
+                <h4>Girls</h4>
+            </div>
+            <div class="column">
+               <a href="/payment.html" target="_blank"> <img src="/images/images15.jpg" style="padding: 18px; border-radius: 50%; height: 150px;width:  150px;">
+                <h4>Boys</h4></a>
+           </div> 
+        </div>
+        <div class="row">
+            <div class="column">
+                <a href="/subfolder/t-shirt.html" target="_blank"><img src="/images/images16.jpg" style="padding: 18px; border-radius: 50%; height: 150px; width: 150px;">
+                <h4>Flats</h4></a>
+            </div>
+            <div class="column">
+                <img src="/images/images13.jpg"  style="padding: 18px; border-radius: 50%; height: 150px; width: 150px;" >
+                <h4>flip flop</h4>
+            </div>
+            <div class="column">
+                <img src="/images/images10.jpg" style="padding: 18px; border-radius: 50%; height: 150px;width:  150px;">
+                 <h4>Formal shoes</h4>
+            </div>
+            <div class="column">
+                <img src="/images/images9.jpg" style="padding: 18px; border-radius: 50%; height: 150px; width: 150px; ">  
+                <h4>Sport shoes</h4>
+            </div>
+            <div class="column">
+               <a href="/payment.html" target="_blank"> <img src="/images/images11.jpg" style="padding: 18px; border-radius: 50%; height: 150px;width:  150px;">
+                <h4>heels</h4></a>
+           </div> 
+        </div>
+        <div class="row">
+            <div class="column">
+                <a href="/subfolder/t-shirt.html" target="_blank"><img src="/images/images17.jpg" style="padding: 18px; border-radius: 50%; height: 150px; width: 150px;">
+                <h4>Mobiles</h4></a>
+            </div>
+            <div class="column">
+                <img src="/images/images18.jpg"  style="padding: 18px; border-radius: 50%; height: 150px; width: 150px;" >
+                <h4>Laptop</h4>
+            </div>
+            <div class="column">
+                <img src="/images/images19.jpg" style="padding: 18px; border-radius: 50%; height: 150px;width:  150px;">
+                 <h4>TVs & Appliances</h4>
+            </div>
+            <div class="column">
+                <img src="/images/images20.jpg" style="padding: 18px; border-radius: 50%; height: 150px; width: 150px; ">  
+                <h4>Home & Appliances</h4>
+            </div>
+            <div class="column">
+               <a href="/payment.html" target="_blank"> <img src="/images/images21.jpg" style="padding: 18px; border-radius: 50%; height: 150px;width:  150px;">
+                <h4>Smart watch</h4></a>
+           </div> 
+        </div>
+        <div id="bottom" style="background-color: #ddd; display: inline-block; margin-top: 30px; ">
+            <h4 style="margin-left: 10px;color: rgb(95, 94, 94);">POPULAR SEARCHES <hr></h4>
+            <p style=" padding: 10px; display: inline-block; margin-top: -10px; color: gray; font-size: small;">Makeup | Dresses For Girls | T-Shirts | Sandals |     Headphones | Babydolls | Blazers For Men | Handbags |Ladies Watches | Bags | Sport Shoes | Reebok Shoes | Puma Shoes | Boxers | Wallets | Tops | Earrings | Fastrack Watches | Kurtis | Nike | Smart Watches | Titan Watches | Designer Blouse | Gowns | Rings | Suit | Cricket | Shoes | Forever 21 | Eye Makeup | Photo Frames | Punjabi Suits | Bikini | Lipstick | Saree | Watches | Dresses | Lehenga | Nike Shoes | Goggles | Bras | Chinos | Shoes | Adidas Shoes | Woodland Shoes | Jewellery | Designers Sarees</p>
+
+            <h4 style="margin-left: 10px;color: rgb(95, 94, 94);">Dreamkart: The One-stop Shopping Destination<hr></h4>
+            <p style=" padding: 10px; display: inline-block; margin-top: -10px; color: gray; font-size: small;">E-commerce is revolutionizing the way we all shop in India. Why do you want to hop from one store to another in search of the latest phone when you can find it on the Internet in a single click? Not only mobiles. Dreamkart houses everything you can possibly imagine, from trending electronics like laptops, tablets, smartphones, and mobile accessories to in-vogue fashion staples like shoes, clothing and lifestyle accessories; from modern furniture like sofa sets, dining tables, and wardrobes to appliances that make your life easy like washing machines, TVs, ACs, mixer grinder juicers and other time-saving kitchen and small appliances; from home furnishings like cushion covers, mattresses and bedsheets to toys and musical instruments, we got them all covered. You name it, and you can stay assured about finding them all here. For those of you with erratic working hours, Dreamkart is your best bet. Shop in your PJs, at night or in the wee hours of the morning. This e-commerce never shuts down.
+            </p>
+
+            <h4 style="margin-left: 10px;color: rgb(95, 94, 94);">No Cost EMI<hr></h4>
+            <p style=" padding: 10px; display: inline-block; margin-top: -10px; color: gray; font-size: small;" >In an attempt to make high-end products accessible to all, our No Cost EMI plan enables you to shop with us under EMI, without shelling out any processing fee. Applicable on select mobiles, laptops, large and small appliances, electronics and watches, you can now shop without burning a hole in your pocket. If you've been eyeing a product for a long time, chances are it may be up for a no cost EMI. Take a look ASAP! Terms and conditions apply.</p>
+
+            <h4 style="margin-left: 10px;color: rgb(95, 94, 94);">About us<hr></h4>
+            <p style=" padding: 10px; display: inline-block; margin-top: -10px; color: gray; font-size: small;">Mail us-  Dreamkart Pune office. Survey No. 747,748,755, Village Induri, Taluka Maval, Pune, 410507  Maharashtra ,India </p> 
+            <p style=" padding: 10px; display: inline-block; margin-top: -10px; color: gray; font-size: small;">Registered Office Address-Dreamkart Internet Private Limited, Dreamkart Pune office. Survey No.747,748,755, Village Induri, Taluka Maval, Pune, 410507  Maharashtra ,India <br> CIN : U51109KA2012PTC066107<p>                                              
+            <p></p>                                 
+                                                
+            
+            <div style="display: inline-block; padding: 5px; width: 100%; border-top: 1px  solid black;">
+                <i style="border-radius: 50%; color: black; margin-left: 10px;">&#8594;</i>
+                <h5 style="display: inline; color: black; margin-bottom: 10px;"> &nbsp; Become a Seller</h5>        
+                <i class="fa fa-question-circle" style="font-size:20px;color:black; margin-bottom:8px; 
+                    margin-left: 60px;"></i>
+                <h5 style="display: inline; color: black; margin-bottom: 10px;">Help center</h5>
+                <i style="color: black; margin-left: 70px;">&#169;</i>
+                <h5 style="display: inline; color: black; margin-bottom: 10px;">2007-2023 Dreamkart.com</h5>
+                <img src="/images/credit/image1.jpg" style="width: 50px; height: 30px; margin-left: 300px; margin-top: 10px;">
+                <img src="/images/credit/image2.jpg" style="width: 50px; height: 30px;">
+                <img src="/images/credit/image3.jpg" style="width: 50px; height: 30px;">
+                <img src="/images/credit/image4.jpg" style="width: 50px; height: 30px;">
+                <img src="/images/credit/image5.jpg" style="width: 50px; height: 30px;">
+                <img src="/images/credit/image6.jpg" style="width: 50px; height: 30px;">
+                <img src="/images/credit/image7.jpg" style="width: 50px; height: 30px;">
+            </div>
+        </div>
+    </body>       
+</html>

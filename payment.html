@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment page</title>
+    <style>
+      form{
+        border: 3px solid gray;
+        margin: auto;
+        width: 30%;
+        padding: 10px;
+      }
+      input[type=text]{
+        padding: 12px 20px;
+        width: 70%;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid black;
+      }
+      .container{
+        padding: 20px;
+      }
+      .submit{
+        margin-left: 38%;
+        background: linear-gradient(to left, #fc6767,
+                    #ec008c);
+        padding: 12px 20px;
+        border-radius: 12px;
+        
+      }
+      .submit:hover{
+        color: brown;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+  
+  <form action="home.html">
+    <h1 style="text-align: center;">card details</h1>
+    <div class="container">
+      <label for="name">Name</label><br>
+      <input type="text" name="name" placeholder="enter cardholder name"><br>
+      <label for="cardno">Card no</label><br>
+      <input type="text" name="cardno" placeholder="enter card number"><br>
+      <label for="cvv">CVV</label><br>
+      <input type="text" name="cvv" placeholder="enter cvv"><br>
+      <label for="expiredate">expire date</label><br>
+      <input type="text" name="expiredate" placeholder="mm/yy">
+    </div>
+      <button class="submit">submit</button>
+  </form> 
+</body>
+</html>
